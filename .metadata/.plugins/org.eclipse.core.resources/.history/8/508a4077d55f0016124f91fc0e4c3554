@@ -1,0 +1,13 @@
+package okasha;
+
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.core.io.FileSystemResource;;
+public class DrawingApp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		BeanFactory factory = new xmlBeanFactory(new FileSystemResource("Spring.xml"));
+		Triangle triangle = new Triangle();
+		triangle.draw();
+	}
+}
