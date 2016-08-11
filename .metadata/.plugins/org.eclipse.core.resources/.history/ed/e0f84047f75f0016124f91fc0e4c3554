@@ -1,0 +1,8 @@
+package okasha;
+
+public class Triangle {
+
+	public void draw() {
+		
+	}
+}
