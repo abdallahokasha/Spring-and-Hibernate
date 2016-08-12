@@ -17,6 +17,7 @@ public class Triangle {
 	public void draw() {
 		for (Point point : points) {
 			System.out.println("Point = (" + point.getX() + ", " + point.getY() + ")");
+
 		}
 	}
 }

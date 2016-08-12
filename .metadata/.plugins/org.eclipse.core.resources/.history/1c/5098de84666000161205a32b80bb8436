@@ -10,8 +10,8 @@
 				<ref bean="point3" />
 			</list>
 		</property>
-	</bean>
 
+	</bean>
 	<bean id="zeroPoint" class="okasha.Point">
 
 		<property name="x" value="0" />

@@ -3,15 +3,16 @@
 
 <beans>
 	<bean id="triangle" class="okasha.Triangle" name="triangle-name">
-		<property name="points">
-			<list>
-				<ref bean="zeroPoint" />
-				<ref bean="point2" />
-				<ref bean="point3" />
-			</list>
+		<property name="pointA" ref="zeroPoint"/>
+		<property name="pointB" ref="point2"/>
+		<property name="pointC" ref="point3"/>
+		
+					</property>
+		<property name="pointC">
+
+			
 		</property>
 	</bean>
-
 	<bean id="zeroPoint" class="okasha.Point">
 
 		<property name="x" value="0" />
@@ -19,13 +20,14 @@
 	</bean>
 	<bean id="point2" class="okasha.Point">
 
-		<property name="x" value="-20" />
-		<property name="y" value="0" />
-	</bean>
+				<property name="x" value="-20" />
+				<property name="y" value="0" />
+			</bean>
 	<bean id="point3" class="okasha.Point">
 
-		<property name="x" value="20" />
-		<property name="y" value="0" />
-	</bean>
-
+				<property name="x" value="20" />
+				<property name="y" value="0" />
+			</bean>
+	
+	<alias name="triangle" alias="triangle-alias" />
 </beans>
