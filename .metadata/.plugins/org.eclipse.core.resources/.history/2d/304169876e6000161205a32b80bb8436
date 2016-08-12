@@ -49,6 +49,6 @@ public class Triangle implements ApplicationContextAware, BeanNameAware {
 
 	@Override
 	public void setBeanName(String beanName) {
-		System.out.println("Bean Name is: " + beanName);
+		System.out.println();
 	}
 }
