@@ -22,7 +22,7 @@
 			<list merge="true">
 				<ref bean="pointC" />
 			</list>
-		</property>
+			</property>
 	</bean>
 
 	<bean id="pointA" class="okasha.Point">

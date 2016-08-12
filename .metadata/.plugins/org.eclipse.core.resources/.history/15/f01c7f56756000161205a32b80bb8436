@@ -20,9 +20,9 @@
 	<bean id="triangle2" class="okasha.Triangle" parent="parentTriangle">
 		<property name="points">
 			<list merge="true">
-				<ref bean="pointC" />
+				<ref bean="pointB" />
 			</list>
-		</property>
+			</property>
 	</bean>
 
 	<bean id="pointA" class="okasha.Point">

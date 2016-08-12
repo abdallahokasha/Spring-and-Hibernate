@@ -36,7 +36,7 @@ public class Triangle implements ApplicationContextAware, BeanNameAware {
 
 	public void draw() {
 		for (Point point : points) {
-			System.out.println("Point = (" + point.getX() + ", " + point.getY() + ")");
+			System.out.println("Point A = (" + points().getX() + ", " + getPointA().getY() + ")");
 
 		}
 	}
