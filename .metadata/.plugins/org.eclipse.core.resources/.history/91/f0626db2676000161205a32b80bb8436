@@ -2,20 +2,24 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 
 <beans>
-	<bean id="triangle" class="okasha.Triangle" autowire="byName" />
-	<bean id="pointA" class="okasha.Point">
+	<bean id="triangle" class="okasha.Triangle" name="triangle-name">
+					
+	</bean>
+
+	<bean id="zeroPoint" class="okasha.Point">
 
 		<property name="x" value="0" />
 		<property name="y" value="0" />
 	</bean>
-	<bean id="pointB" class="okasha.Point">
+	<bean id="point2" class="okasha.Point">
 
 		<property name="x" value="-20" />
 		<property name="y" value="0" />
 	</bean>
-	<bean id="pointC" class="okasha.Point">
+	<bean id="point3" class="okasha.Point">
 
 		<property name="x" value="20" />
 		<property name="y" value="0" />
 	</bean>
+
 </beans>

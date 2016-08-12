@@ -2,7 +2,7 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 
 <beans>
-	<bean id="triangle" class="okasha.Triangle" autowire="byName" />
+	<bean id="triangle" class="okasha.Triangle" autowire="byName"/>
 	<bean id="pointA" class="okasha.Point">
 
 		<property name="x" value="0" />
@@ -18,4 +18,5 @@
 		<property name="x" value="20" />
 		<property name="y" value="0" />
 	</bean>
+
 </beans>
