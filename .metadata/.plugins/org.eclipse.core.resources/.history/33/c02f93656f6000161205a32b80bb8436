@@ -2,18 +2,8 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 
 <beans>
-	<bean id="parentTriangle" class="okasha.Triangle">
-		<property name="pointA" ref="pointA" />
-	</bean>
-	<bean id="triangle1" class="okasha.Triangle" parent="parentTriangle">
-		<property name="pointB" ref="pointB" />
-		<property name="pointC" ref="pointC" />
-	</bean>
-
-	<bean id="triangle2" class="okasha.Triangle" parent="parentTriangle">
-		<property name="pointB" ref="pointB" />
-	</bean>
-
+	<bean id="triangle" class="okasha.Triangle" autowire="byName"
+		scope="singleton" />
 	<bean id="pointA" class="okasha.Point">
 
 		<property name="x" value="0" />
