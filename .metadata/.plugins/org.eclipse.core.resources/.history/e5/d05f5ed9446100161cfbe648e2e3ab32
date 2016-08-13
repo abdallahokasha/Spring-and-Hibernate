@@ -28,7 +28,5 @@ http://www.springframework.org/schema/beans http://www.springframework.org/schem
 	</bean>
 	<bean
 		class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
-		<bean
-		class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" />
- <!--  <context:annotation-config/> -->
+
 </beans>

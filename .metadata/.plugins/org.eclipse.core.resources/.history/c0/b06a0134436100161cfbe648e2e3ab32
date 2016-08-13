@@ -17,7 +17,7 @@ public class DrawingApp {
 		// circle.draw();
 		Shape shape = (Shape) context.getBean("circle");
 		shape.draw();
-		//shape = (Shape) context.getBean("triangle");
-		//shape.draw();
+		shape = (Shape) context.getBean("triangle");
+		shape.draw();
 	}
 }
