@@ -136,3 +136,16 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp
 
 !ENTRY org.eclipse.core.resources 2 10035 2016-08-12 09:48:19.933
 !MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2016-08-13 09:32:36.675 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.7.0_101
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.wst.sse.ui 4 4 2016-08-13 14:17:39.845
+!MESSAGE BlockCommentingStrategy#remove could not find the commenting region to remove
+
+!ENTRY org.eclipse.wst.sse.ui 4 4 2016-08-13 14:17:42.066
+!MESSAGE BlockCommentingStrategy#remove could not find the commenting region to remove

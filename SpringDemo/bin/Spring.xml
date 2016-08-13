@@ -1,28 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd"> -->
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:context="http://www.springframework.org/schema/context"
-       xsi:schemaLocation="
-           http://www.springframework.org/schema/beans
-           http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
-           http://www.springframework.org/schema/context
-           http://www.springframework.org/schema/context/spring-context-3.1.xsd" >
+ <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 
-	<bean
-		class="org.springframework.jms.annotation.AbstractJmsAnnotationDrivenTests$FullConfigurableBean" />
-
-	<bean id="simpleFactory"
-		class="org.springframework.jms.config.JmsListenerContainerTestFactory" />
-
-	<context:property-placeholder
-		location="classpath:org/springframework/jms/annotation/jms-listener.properties" />
-
-	<!-- <bean id="triangle" class="okasha.Triangle"> <property name="pointA" 
-		ref="pointA" /> <property name="pointB" ref="pointB" /> <property name="pointC" 
-		ref="pointC" /> </bean> -->
+<beans>
+	<bean id="triangle" class="okasha.Triangle">
+		<property name="pointA" ref="pointA" />
+		<property name="pointB" ref="pointB" />
+		<property name="pointC" ref="pointC" />
+	</bean>
+	<bean id="circle" class="okasha.Circle">
+		<property name="center" ref="pointA" />
+	</bean>
 	<bean id="pointA" class="okasha.Point">
-		<qualifier value="circleRelated" />
+
 		<property name="x" value="0" />
 		<property name="y" value="5" />
 	</bean>
@@ -33,14 +22,15 @@
 	</bean>
 	<bean id="pointC" class="okasha.Point">
 
-		<property name="x" value="5" />
+		<property name="x" value="2" />
 		<property name="y" value="5" />
 	</bean>
-	<bean id="center" class="okasha.Point">
-		<property name="x" value="-5" />
-		<property name="y" value="5" />
+	<bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basenames">
+			<list>
+				<value>mymessages</value>
+			</list>
+		</property>
 	</bean>
-	<!-- <bean id="circle" class="okasha.Circle" />
-	<Context:annotation-config /> -->
-     <context:component-scan base-package="okasha"></context:component-scan>
-</beans>
+</beans> 

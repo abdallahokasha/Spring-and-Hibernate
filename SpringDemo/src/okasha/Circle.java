@@ -3,34 +3,35 @@ package okasha;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.annotation.Resource;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
-@Repository
+import org.springframework.context.MessageSource;
+
 public class Circle implements Shape {
 	private Point center;
+	@Autowired
+	private MessageSource messageSource;
 
-	public void draw() {
-		System.out.println("Circle Drwaing \nThis is circle center:(" + center.getX() + ", " + center.getY() + ")");
+	public MessageSource getMessageSource() {
+		return messageSource;
+	}
+
+	public void setMessageSource(MessageSource messageSource) {
+		this.messageSource = messageSource;
 	}
 
 	public Point getCenter() {
 		return center;
 	}
-
-	@Resource
+    @Resource
 	public void setCenter(Point center) {
 		this.center = center;
 	}
-    @PostConstruct
-	public void initializeCircle() {
-		System.out.println("Init of Circle");
-	}
-    @PreDestroy
-	public void destroyCircle() {
-		System.out.println("Destroy of circle");
-	}
+    @Override
+	public void draw() {
+		System.out.println("Circle Drwaing \nThis is circle center:(" + center.getX() + ", " + center.getY() + ")");
+		System.out.println(this.messageSource.getMessage("drawing.circle", null, "Default drawing.circle", null));
+		System.out.println(this.messageSource.getMessage("drawing.point", new Object[]{center.getX(), center.getY()}, "Default drawing.point", null));
+
+    }
 }
