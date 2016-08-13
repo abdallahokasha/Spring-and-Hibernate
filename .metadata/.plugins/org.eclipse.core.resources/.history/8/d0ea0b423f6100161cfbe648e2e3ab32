@@ -7,6 +7,9 @@
 		<property name="pointB" ref="pointB" />
 		<property name="pointC" ref="pointC" />
 	</bean>
+	<bean id="circle" class="okasha.Circle">
+		
+	</bean>
 	<bean id="pointA" class="okasha.Point">
 
 		<property name="x" value="0" />
@@ -22,8 +25,5 @@
 		<property name="x" value="5" />
 		<property name="y" value="5" />
 	</bean>
-	<bean id="circle" class="okasha.Circle">
-		<property name="center" ref="pointA" />
-	</bean>
-<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>
+
 </beans>

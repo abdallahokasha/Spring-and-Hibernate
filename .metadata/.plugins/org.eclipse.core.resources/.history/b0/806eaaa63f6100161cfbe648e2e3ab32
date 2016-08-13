@@ -25,5 +25,5 @@
 	<bean id="circle" class="okasha.Circle">
 		<property name="center" ref="pointA" />
 	</bean>
-<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>
+
 </beans>
