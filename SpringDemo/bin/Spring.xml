@@ -2,8 +2,8 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 
 <beans default-init-method="myInit" default-destroy-method="cleanUp">
-	<bean id="parentTriangle" class="okasha.Triangle" abstract="true" init-method="myInit" 
-	destroy-method="cleanUp">
+	<bean id="parentTriangle" class="okasha.Triangle" abstract="true"
+		init-method="myInit" destroy-method="cleanUp">
 		<property name="points">
 			<list>
 				<ref bean="pointA" />
@@ -41,4 +41,5 @@
 		<property name="x" value="20" />
 		<property name="y" value="0" />
 	</bean>
+	<bean class="okasha.DisplayNameBeanProcessor" />
 </beans>

@@ -1,0 +1,7 @@
+package okasha;
+
+import org.springframework.beans.factory.config.BeanPostProcessor;
+
+public class DisplayNameBeanProcessor implements BeanPostProcessor{
+
+}

@@ -1,9 +1,0 @@
-package okasha;
-
-public class Triangle {
-	private int type;
-	
-	public void draw() {
-		System.out.println("Triangle Drawn!");
-	}
-}

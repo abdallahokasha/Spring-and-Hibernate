@@ -1,0 +1,5 @@
+package okasha;
+
+public class DisplayNameBeanProcessor implements BeanPost{
+
+}
