@@ -1,0 +1,6 @@
+package okasha;
+
+public class Circle implements Shape {
+private Point center;
+
+}

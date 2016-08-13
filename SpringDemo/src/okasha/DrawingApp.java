@@ -10,9 +10,14 @@ import org.springframework.core.io.FileSystemResource;
 public class DrawingApp {
 
 	public static void main(String[] args) {
-		AbstractApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml");
-		context.registerShutdownHook();
-		Triangle triangle = (Triangle) context.getBean("triangle2");
-		triangle.draw();
+		ApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml");
+		// Triangle triangle = (Triangle) context.getBean("triangle");
+		// Circle circle = (Circle) context.getBean("circle");
+		// triangle.draw();
+		// circle.draw();
+		Shape shape = (Shape) context.getBean("circle");
+		shape.draw();
+		shape = (Shape) context.getBean("triangle");
+		shape.draw();
 	}
 }

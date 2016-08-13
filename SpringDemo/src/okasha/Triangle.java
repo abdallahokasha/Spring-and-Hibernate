@@ -8,65 +8,38 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
-public class Triangle implements ApplicationContextAware, BeanNameAware, InitializingBean, DisposableBean {
-	// public class Triangle implements ApplicationContextAware, BeanNameAware {
-	// private Point pointA, pointB, pointC;
-	private List<Point> points;
-	private ApplicationContext context = null;
+public class Triangle implements Shape {
 
-	/*
-	 * public Point getPointA() { return pointA; }
-	 * 
-	 * public void setPointA(Point pointA) { this.pointA = pointA; }
-	 * 
-	 * public Point getPointB() { return pointB; }
-	 * 
-	 * public void setPointB(Point pointB) { this.pointB = pointB; }
-	 * 
-	 * public Point getPointC() { return pointC; }
-	 * 
-	 * public void setPointC(Point pointC) { this.pointC = pointC; }
-	 */
-	public List<Point> getPoints() {
-		return points;
+	private Point pointA, pointB, pointC;
+
+	public Point getPointA() {
+		return pointA;
 	}
 
-	public void setPoints(List<Point> points) {
-		this.points = points;
+	public void setPointA(Point pointA) {
+		this.pointA = pointA;
+	}
+
+	public Point getPointB() {
+		return pointB;
+	}
+
+	public void setPointB(Point pointB) {
+		this.pointB = pointB;
+	}
+
+	public Point getPointC() {
+		return pointC;
+	}
+
+	public void setPointC(Point pointC) {
+		this.pointC = pointC;
 	}
 
 	public void draw() {
-		for (Point point : points) {
-			System.out.println("Point = (" + point.getX() + ", " + point.getY() + ")");
-
-		}
-	}
-
-	@Override
-	public void setApplicationContext(ApplicationContext context) throws BeansException {
-		this.context = context;
-	}
-
-	@Override
-	public void setBeanName(String beanName) {
-		System.out.println("Bean Name is: " + beanName);
-	}
-
-	@Override
-	public void afterPropertiesSet() throws Exception {
-		System.out.println("IntializingBean init method called for triangle");
-	}
-
-	@Override
-	public void destroy() throws Exception {
-		System.out.println("DisposableBean destory method for Triangle");
-	}
-
-	public void myInit() {
-		System.out.println("Init method called for triangle");
-	}
-
-	public void cleanUp() {
-		System.out.println("cleanUp method for Triangle");
+		System.out.println("Drwaing Triangle");
+		System.out.println("Point A = (" + getPointA().getX() + ", " + getPointA().getY() + ")");
+		System.out.println("Point B = (" + getPointB().getX() + ", " + getPointB().getY() + ")");
+		System.out.println("Point C = (" + getPointC().getX() + ", " + getPointC().getY() + ")");
 	}
 }
