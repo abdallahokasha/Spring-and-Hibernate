@@ -1,0 +1,14 @@
+package okasha;
+
+import java.awt.Event;
+
+import org.springframework.context.ApplicationEvent;
+import org.springframework.context.ApplicationListener;
+@component
+public class myEventListener implements ApplicationListener {
+
+	@Override
+	public void onApplicationEvent(ApplicationEvent event) {
+		System.out.println(event.toString());
+	}
+}

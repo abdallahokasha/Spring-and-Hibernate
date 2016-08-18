@@ -1,0 +1,5 @@
+package okasha.dto;
+
+public class UserDetails {
+
+}

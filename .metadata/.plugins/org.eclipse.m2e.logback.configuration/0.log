@@ -119,3 +119,6 @@ java.net.UnknownHostException: services.gradle.org
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1488) [org.eclipse.equinox.launcher_1.3.100.v20150511-1540.jar:na]
 2016-08-12 09:48:41,637 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
 2016-08-13 09:33:06,231 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-08-15 09:11:22,686 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-08-17 20:15:30,966 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-08-18 08:10:22,319 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
